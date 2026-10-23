@@ -15,290 +15,62 @@
   --white: #ffffff;
   --text: #28344b;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  line-height: 1.6;
-  background: #fff;
-}
-
-header {
-  background: var(--navy);
-  color: white;
-  padding: 15px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: var(--text); line-height: 1.6; background: #fff; }
+header { background: var(--navy); color: white; padding: 15px 7%; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; position: sticky; top: 0; z-index: 10; }
+.logo { font-size: 22px; font-weight: 800; }
 .logo span { color: var(--gold); }
-
-nav {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-}
-
+nav { display: flex; gap: 18px; flex-wrap: wrap; }
+nav a { text-decoration: none; color: white; font-size: 14px; font-weight: bold; }
 nav a:hover { color: var(--gold); }
-
-.hero {
-  padding: 85px 7%;
-  color: white;
-  text-align: center;
-  background: linear-gradient(130deg, #10264b, #2457d6);
-}
-
-.hero .tag {
-  display: inline-block;
-  background: #ffffff20;
-  border: 1px solid #ffffff55;
-  padding: 7px 18px;
-  border-radius: 30px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(34px, 6vw, 58px);
-  line-height: 1.15;
-  margin-bottom: 18px;
-}
-
+.hero { padding: 85px 7%; color: white; text-align: center; background: linear-gradient(130deg, #10264b, #2457d6); }
+.hero .tag { display: inline-block; background: #ffffff20; border: 1px solid #ffffff55; padding: 7px 18px; border-radius: 30px; margin-bottom: 20px; }
+.hero h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.15; margin-bottom: 18px; }
 .hero h1 span { color: var(--gold); }
-
-.hero p {
-  max-width: 680px;
-  margin: 0 auto 28px;
-  color: #e5ecff;
-  font-size: 17px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 5px;
-  border-radius: 7px;
-  background: var(--gold);
-  color: var(--navy);
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-}
-
+.hero p { max-width: 680px; margin: 0 auto 28px; color: #e5ecff; font-size: 17px; }
+.btn { display: inline-block; padding: 12px 24px; margin: 5px; border-radius: 7px; background: var(--gold); color: var(--navy); text-decoration: none; font-weight: bold; border: none; cursor: pointer; }
+.btn-outline { background: transparent; border: 1px solid white; color: white; }
 section { padding: 65px 7%; }
-
-.section-title {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.section-title h2 {
-  font-size: clamp(26px, 4vw, 36px);
-  color: var(--navy);
-}
-
-.section-title p {
-  color: #69758a;
-  margin-top: 8px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  margin-top: -1px;
-  padding: 25px 7%;
-  background: var(--light);
-}
-
-.stat {
-  text-align: center;
-  padding: 14px 8px;
-}
-
-.stat h3 {
-  font-size: 25px;
-  color: var(--blue);
-}
-
+.section-title { text-align: center; margin-bottom: 35px; }
+.section-title h2 { font-size: clamp(26px, 4vw, 36px); color: var(--navy); }
+.section-title p { color: #69758a; margin-top: 8px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: -1px; padding: 25px 7%; background: var(--light); }
+.stat { text-align: center; padding: 14px 8px; }
+.stat h3 { font-size: 25px; color: var(--blue); }
 .stat p { font-size: 14px; }
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  padding: 25px;
-  background: white;
-  border: 1px solid #e4e9f4;
-  border-radius: 14px;
-  box-shadow: 0 5px 20px #10264b09;
-  transition: transform .2s, box-shadow .2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 28px #10264b15;
-}
-
-.card .icon {
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.card h3 {
-  color: var(--navy);
-  margin-bottom: 8px;
-  font-size: 19px;
-}
-
-.card p {
-  color: #657087;
-  font-size: 14px;
-}
-
-.classes {
-  background: var(--light);
-}
-
-.class-card {
-  text-align: center;
-  border-top: 4px solid var(--blue);
-}
-
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.card { padding: 25px; background: white; border: 1px solid #e4e9f4; border-radius: 14px; box-shadow: 0 5px 20px #10264b09; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 28px #10264b15; }
+.card .icon { font-size: 34px; margin-bottom: 12px; }
+.card h3 { color: var(--navy); margin-bottom: 8px; font-size: 19px; }
+.card p { color: #657087; font-size: 14px; }
+.classes { background: var(--light); }
+.class-card { text-align: center; border-top: 4px solid var(--blue); }
 .class-card h3 { font-size: 25px; }
-
-.class-card .level {
-  color: var(--blue);
-  font-weight: bold;
-  margin: 8px 0;
-}
-
-.why {
-  background: var(--navy);
-  color: white;
-}
-
+.class-card .level { color: var(--blue); font-weight: bold; margin: 8px 0; }
+.why { background: var(--navy); color: white; }
 .why .section-title h2 { color: white; }
 .why .section-title p { color: #c9d5ee; }
-
-.why .card {
-  background: #ffffff0c;
-  border-color: #ffffff25;
-}
-
+.why .card { background: #ffffff0c; border-color: #ffffff25; }
 .why .card h3 { color: var(--gold); }
 .why .card p { color: #d6def0; }
-
-.steps {
-  max-width: 750px;
-  margin: auto;
-}
-
-.steps li {
-  list-style: none;
-  background: var(--light);
-  border-left: 4px solid var(--blue);
-  padding: 16px 20px;
-  margin-bottom: 12px;
-  border-radius: 5px;
-}
-
-.enquiry {
-  background: var(--light);
-}
-
-.form-box {
-  max-width: 650px;
-  margin: auto;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 25px #10264b10;
-}
-
-.form-box label {
-  display: block;
-  font-weight: bold;
-  margin: 12px 0 5px;
-}
-
-.form-box input,
-.form-box select,
-.form-box textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #d8deeb;
-  border-radius: 7px;
-  font: inherit;
-  background: white;
-}
-
-.form-box button {
-  width: 100%;
-  margin: 20px 0 0;
-  font-size: 16px;
-}
-
-#contact {
-  text-align: center;
-}
-
-.contact-info {
-  margin: 15px auto;
-  max-width: 600px;
-}
-
-footer {
-  background: #0a1934;
-  color: #d6def0;
-  text-align: center;
-  padding: 25px 7%;
-  font-size: 14px;
-}
-
+.steps { max-width: 750px; margin: auto; }
+.steps li { list-style: none; background: var(--light); border-left: 4px solid var(--blue); padding: 16px 20px; margin-bottom: 12px; border-radius: 5px; }
+.enquiry { background: var(--light); }
+.form-box { max-width: 650px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px #10264b10; }
+.form-box label { display: block; font-weight: bold; margin: 12px 0 5px; }
+.form-box input, .form-box select, .form-box textarea { width: 100%; padding: 12px; border: 1px solid #d8deeb; border-radius: 7px; font: inherit; background: white; }
+.form-box button { width: 100%; margin: 20px 0 0; font-size: 16px; }
+#contact { text-align: center; }
+.contact-info { margin: 15px auto; max-width: 600px; }
+footer { background: #0a1934; color: #d6def0; text-align: center; padding: 25px 7%; font-size: 14px; }
 footer a { color: var(--gold); }
-
 @media (max-width: 850px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   header { justify-content: center; }
   nav { justify-content: center; }
 }
-
 @media (max-width: 560px) {
   .cards { grid-template-columns: 1fr; }
   .hero { padding: 65px 6%; }
@@ -309,219 +81,19 @@ footer a { color: var(--gold); }
   .form-box { padding: 20px; }
 }
 /* PHOTO GALLERY */
-.gallery-section {
-  background: var(--light);
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.gallery-item {
-  background: white;
-  padding: 10px;
-  border-radius: 14px;
-  border: 1px solid #e4e9f4;
-  box-shadow: 0 5px 20px #10264b12;
-  overflow: hidden;
-  transition: transform .3s, box-shadow .3s;
-}
-
-.gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 28px #10264b20;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 9px;
-  cursor: pointer;
-}
-
-.gallery-item h3 {
-  color: var(--navy);
-  margin: 12px 5px 4px;
-}
-
-.gallery-item p {
-  color: #69758a;
-  font-size: 14px;
-  margin: 0 5px 8px;
-}
-
-/* FULL-SCREEN IMAGE */
-.gallery-lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(5, 15, 35, .94);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.gallery-lightbox.active {
-  display: flex;
-}
-
-.gallery-lightbox img {
-  max-width: 95%;
-  max-height: 85vh;
-  object-fit: contain;
-  border: 3px solid var(--gold);
-  border-radius: 10px;
-}
-
-.gallery-close {
-  position: absolute;
-  top: 12px;
-  right: 22px;
-  color: white;
-  background: transparent;
-  border: none;
-  font-size: 42px;
-  cursor: pointer;
-}
-
-@media (max-width: 850px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-item img {
-    height: 250px;
-  }
-}
-
-<!-- PHOTO GALLERY -->
-<section id="gallery" class="gallery-section">
-  <div class="section-title">
-    <h2>Our Photo Gallery</h2>
-    <p>Explore the classrooms and learning environment at Shree Sai Academy.</p>
-  </div>
-
-  <div class="gallery-grid">
-
-    <div class="gallery-item">
-      <img src="photos/classroom1.jpg"
-           alt="Shree Sai Academy classroom 1"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Classroom View 1</h3>
-      <p>A comfortable learning environment</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="photos/classroom2.jpg"
-           alt="Shree Sai Academy classroom 2"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Classroom View 2</h3>
-      <p>Organised student seating</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="photos/classroom3.jpg"
-           alt="Shree Sai Academy classroom 3"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Our Learning Space</h3>
-      <p>Focused study and preparation</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="photos/classroom4.jpg"
-           alt="Shree Sai Academy classroom 4"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Classroom View 4</h3>
-      <p>Space for classroom learning</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="photos/classroom5.jpg"
-           alt="Shree Sai Academy teaching area"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Teaching Area</h3>
-      <p>Learn with confidence</p>
-    </div>
-
-    <div class="gallery-item">
-      <img src="photos/classroom6.jpg"
-           alt="Shree Sai Academy classroom 6"
-           loading="lazy"
-           onclick="openGalleryPhoto(this)">
-      <h3>Inside Our Academy</h3>
-      <p>Shree Sai Academy, Thane</p>
-    </div>
-
-  </div>
-
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#contact" class="btn">Visit Our Academy</a>
-  </div>
-</section>
-
-<!-- IMAGE VIEWER -->
-<div class="gallery-lightbox"
-     id="galleryLightbox"
-     role="dialog"
-     aria-modal="true"
-     aria-label="Enlarged classroom photograph"
-     onclick="closeGalleryPhoto()">
-
-  <button class="gallery-close"
-          type="button"
-          aria-label="Close enlarged image"
-          onclick="closeGalleryPhoto()">&times;</button>
-
-  <img id="galleryLargeImage" src=""
-       alt="Enlarged classroom photograph">
-</div>
-
-function openGalleryPhoto(image) {
-  const lightbox = document.getElementById("galleryLightbox");
-  const largeImage = document.getElementById("galleryLargeImage");
-
-  largeImage.src = image.src;
-  largeImage.alt = image.alt;
-  lightbox.classList.add("active");
-  document.body.style.overflow = "hidden";
-}
-
-function closeGalleryPhoto() {
-  document.getElementById("galleryLightbox")
-    .classList.remove("active");
-
-  document.getElementById("galleryLargeImage").src = "";
-  document.body.style.overflow = "";
-}
-
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    closeGalleryPhoto();
-  }
-});
-
-document.getElementById("galleryLightbox")
-  .addEventListener("click", function(event) {
-    if (event.target.id === "galleryLargeImage") {
-      event.stopPropagation();
-    }
-  });  
+.gallery-section { background: var(--light); }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.gallery-item { background: white; padding: 10px; border-radius: 14px; border: 1px solid #e4e9f4; box-shadow: 0 5px 20px #10264b12; overflow: hidden; transition: transform .3s, box-shadow .3s; }
+.gallery-item:hover { transform: translateY(-5px); box-shadow: 0 10px 28px #10264b20; }
+.gallery-item img { display: block; width: 100%; height: 240px; object-fit: cover; border-radius: 9px; cursor: pointer; }
+.gallery-item h3 { color: var(--navy); margin: 12px 5px 4px; }
+.gallery-item p { color: #69758a; font-size: 14px; margin: 0 5px 8px; }
+.gallery-lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(5, 15, 35, .94); align-items: center; justify-content: center; padding: 20px; }
+.gallery-lightbox.active { display: flex; }
+.gallery-lightbox img { max-width: 95%; max-height: 85vh; object-fit: contain; border: 3px solid var(--gold); border-radius: 10px; }
+.gallery-close { position: absolute; top: 12px; right: 22px; color: white; background: transparent; border: none; font-size: 42px; cursor: pointer; }
+@media (max-width: 850px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .gallery-grid { grid-template-columns: 1fr; } .gallery-item img { height: 250px; } }
 </style>
 </head>
 
@@ -534,8 +106,8 @@ document.getElementById("galleryLightbox")
     <a href="#classes">Classes</a>
     <a href="#facilities">Facilities</a>
     <a href="#why-us">Why Us</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
-    <a href="#Gallery">Gallery</a>
   </nav>
 </header>
 
@@ -543,186 +115,92 @@ document.getElementById("galleryLightbox")
 <section class="hero" id="home">
   <div class="tag">🎓 Admissions Open — Enquire Now</div>
   <h1>Learn Today.<br><span>Lead Tomorrow.</span></h1>
-  <p>
-    Welcome to Shree Sai Academy — a place where students build
-    strong concepts, develop confidence and prepare for academic success.
-  </p>
+  <p>Welcome to Shree Sai Academy — a place where students build strong concepts, develop confidence and prepare for academic success.</p>
   <p><strong>Std. 8th to 12th | Smart AC Classrooms | Exam-Focused Learning</strong></p>
   <a href="#enquiry" class="btn">Enquire for Admission →</a>
   <a href="#facilities" class="btn btn-outline">Explore Facilities</a>
 </section>
 
 <div class="stats">
-  <div class="stat">
-    <h3>8th–12th</h3>
-    <p>School Standards</p>
-  </div>
-  <div class="stat">
-    <h3>Weekly</h3>
-    <p>Test Practice</p>
-  </div>
-  <div class="stat">
-    <h3>Regular</h3>
-    <p>Revision Sessions</p>
-  </div>
-  <div class="stat">
-    <h3>Focused</h3>
-    <p>Student Guidance</p>
-  </div>
+  <div class="stat"><h3>8th–12th</h3><p>School Standards</p></div>
+  <div class="stat"><h3>Weekly</h3><p>Test Practice</p></div>
+  <div class="stat"><h3>Regular</h3><p>Revision Sessions</p></div>
+  <div class="stat"><h3>Focused</h3><p>Student Guidance</p></div>
 </div>
 
 <section id="classes" class="classes">
-  <div class="section-title">
-    <h2>Our Classes</h2>
-    <p>Learning support for every stage of school education.</p>
-  </div>
+  <div class="section-title"><h2>Our Classes</h2><p>Learning support for every stage of school education.</p></div>
   <div class="cards">
-    <div class="card class-card">
-      <div class="icon">📘</div>
-      <h3>Std. 8th</h3>
-      <p class="level">Foundation Building</p>
-      <p>Clear concepts, regular practice, homework guidance and subject revision.</p>
-    </div>
-    <div class="card class-card">
-      <div class="icon">📗</div>
-      <h3>Std. 9th</h3>
-      <p class="level">Concept Development</p>
-      <p>Strengthen fundamentals, practise questions and improve answer-writing skills.</p>
-    </div>
-    <div class="card class-card">
-      <div class="icon">🏆</div>
-      <h3>Std. 10th</h3>
-      <p class="level">Board Exam Preparation</p>
-      <p>Board-pattern papers, important questions, revision lectures and mock exams.</p>
-    </div>
-    <div class="card class-card">
-      <div class="icon">📙</div>
-      <h3>Std. 11th</h3>
-      <p class="level">Stream-Based Learning</p>
-      <p>Concept clarity, subject-wise practice and guidance according to the chosen stream.</p>
-    </div>
-    <div class="card class-card">
-      <div class="icon">🎯</div>
-      <h3>Std. 12th</h3>
-      <p class="level">Board Exam Focus</p>
-      <p>Intensive revision, previous-year papers, mock tests and exam-oriented preparation.</p>
-    </div>
-    <div class="card class-card">
-      <div class="icon">💡</div>
-      <h3>All-Round Support</h3>
-      <p class="level">Study Smart</p>
-      <p>Time management, study planning, doubt-solving and personal academic guidance.</p>
-    </div>
+    <div class="card class-card"><div class="icon">📘</div><h3>Std. 8th</h3><p class="level">Foundation Building</p><p>Clear concepts, regular practice, homework guidance and subject revision.</p></div>
+    <div class="card class-card"><div class="icon">📗</div><h3>Std. 9th</h3><p class="level">Concept Development</p><p>Strengthen fundamentals, practise questions and improve answer-writing skills.</p></div>
+    <div class="card class-card"><div class="icon">🏆</div><h3>Std. 10th</h3><p class="level">Board Exam Preparation</p><p>Board-pattern papers, important questions, revision lectures and mock exams.</p></div>
+    <div class="card class-card"><div class="icon">📙</div><h3>Std. 11th</h3><p class="level">Stream-Based Learning</p><p>Concept clarity, subject-wise practice and guidance according to the chosen stream.</p></div>
+    <div class="card class-card"><div class="icon">🎯</div><h3>Std. 12th</h3><p class="level">Board Exam Focus</p><p>Intensive revision, previous-year papers, mock tests and exam-oriented preparation.</p></div>
+    <div class="card class-card"><div class="icon">💡</div><h3>All-Round Support</h3><p class="level">Study Smart</p><p>Time management, study planning, doubt-solving and personal academic guidance.</p></div>
   </div>
 </section>
 
 <section id="facilities">
-  <div class="section-title">
-    <h2>Our Classroom Facilities</h2>
-    <p>Everything students need for a focused learning experience.</p>
-  </div>
+  <div class="section-title"><h2>Our Classroom Facilities</h2><p>Everything students need for a focused learning experience.</p></div>
   <div class="cards">
-    <div class="card">
-      <div class="icon">❄️</div>
-      <h3>AC Classrooms</h3>
-      <p>Comfortable, air-conditioned classrooms for a better learning environment.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🔄</div>
-      <h3>Revision Lectures</h3>
-      <p>Topic-wise revision to strengthen understanding before examinations.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📝</div>
-      <h3>Weekly Exam Papers</h3>
-      <p>Regular tests to practise writing answers, improve speed and check progress.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📚</div>
-      <h3>Lecture Notes</h3>
-      <p>Helpful notes, key points and summaries for quick revision and practice.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📖</div>
-      <h3>Digests & Study Material</h3>
-      <p>Reference material, question banks and practice exercises for students.</p>
-    </div>
-    <div class="card">
-      <div class="icon">❓</div>
-      <h3>Doubt-Solving Sessions</h3>
-      <p>Dedicated help to understand difficult topics and clear doubts.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📊</div>
-      <h3>Progress Tracking</h3>
-      <p>Test performance reviews to identify strengths and areas for improvement.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📅</div>
-      <h3>Study Timetable</h3>
-      <p>Structured study planning, homework support and exam preparation schedules.</p>
-    </div>
-    <div class="card">
-      <div class="icon">👨‍🏫</div>
-      <h3>Personal Attention</h3>
-      <p>Guidance to help students improve at their own pace and build confidence.</p>
-    </div>
-    <div class="card">
-      <div class="icon">📄</div>
-      <h3>Previous-Year Papers</h3>
-      <p>Practise past examination papers and become familiar with question patterns.</p>
-    </div>
-    <div class="card">
-      <div class="icon">✍️</div>
-      <h3>Answer-Writing Practice</h3>
-      <p>Learn how to present answers clearly, manage time and avoid common mistakes.</p>
-    </div>
-    <div class="card">
-      <div class="icon">👪</div>
-      <h3>Parent-Teacher Updates</h3>
-      <p>Share academic progress and discuss areas where additional support is needed.</p>
-    </div>
+    <div class="card"><div class="icon">❄️</div><h3>AC Classrooms</h3><p>Comfortable, air-conditioned classrooms for a better learning environment.</p></div>
+    <div class="card"><div class="icon">🔄</div><h3>Revision Lectures</h3><p>Topic-wise revision to strengthen understanding before examinations.</p></div>
+    <div class="card"><div class="icon">📝</div><h3>Weekly Exam Papers</h3><p>Regular tests to practise writing answers, improve speed and check progress.</p></div>
+    <div class="card"><div class="icon">📚</div><h3>Lecture Notes</h3><p>Helpful notes, key points and summaries for quick revision and practice.</p></div>
+    <div class="card"><div class="icon">📖</div><h3>Digests & Study Material</h3><p>Reference material, question banks and practice exercises for students.</p></div>
+    <div class="card"><div class="icon">❓</div><h3>Doubt-Solving Sessions</h3><p>Dedicated help to understand difficult topics and clear doubts.</p></div>
   </div>
 </section>
 
 <section class="why" id="why-us">
-  <div class="section-title">
-    <h2>Why Choose Shree Sai Academy™?</h2>
-    <p>A supportive environment focused on learning and improvement.</p>
-  </div>
+  <div class="section-title"><h2>Why Choose Shree Sai Academy™?</h2><p>A supportive environment focused on learning and improvement.</p></div>
   <div class="cards">
-    <div class="card">
-      <h3>01. Strong Fundamentals</h3>
-      <p>Understand concepts instead of simply memorising answers.</p>
-    </div>
-    <div class="card">
-      <h3>02. Exam-Oriented Teaching</h3>
-      <p>Practise important questions and follow a structured revision plan.</p>
-    </div>
-    <div class="card">
-      <h3>03. Regular Assessment</h3>
-      <p>Use weekly tests and feedback to monitor learning progress.</p>
-    </div>
-    <div class="card">
-      <h3>04. Doubt Resolution</h3>
-      <p>Get help with challenging lessons and questions.</p>
-    </div>
-    <div class="card">
-      <h3>05. Better Study Habits</h3>
-      <p>Build consistency, discipline and effective time management.</p>
-    </div>
-    <div class="card">
-      <h3>06. Confidence Building</h3>
-      <p>Prepare systematically and approach examinations with confidence.</p>
-    </div>
+    <div class="card"><h3>01. Strong Fundamentals</h3><p>Understand concepts instead of simply memorising answers.</p></div>
+    <div class="card"><h3>02. Exam-Oriented Teaching</h3><p>Practise important questions and follow a structured revision plan.</p></div>
+    <div class="card"><h3>03. Regular Assessment</h3><p>Use weekly tests and feedback to monitor learning progress.</p></div>
+    <div class="card"><h3>04. Doubt Resolution</h3><p>Get help with challenging lessons and questions.</p></div>
+    <div class="card"><h3>05. Better Study Habits</h3><p>Build consistency, discipline and effective time management.</p></div>
+    <div class="card"><h3>06. Confidence Building</h3><p>Prepare systematically and approach examinations with confidence.</p></div>
   </div>
 </section>
 
-<section id="admission-process">
+<!-- PHOTO GALLERY - NOW CORRECTLY PLACED -->
+<section id="gallery" class="gallery-section">
   <div class="section-title">
-    <h2>Admission Process</h2>
-    <p>Start your learning journey in three simple steps.</p>
+    <h2>Our Photo Gallery</h2>
+    <p>Explore the classrooms and learning environment at Shree Sai Academy.</p>
   </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="photos/classroom1.jpg" alt="Shree Sai Academy classroom 1" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Classroom View 1</h3><p>A comfortable learning environment</p>
+    </div>
+    <div class="gallery-item">
+      <img src="photos/classroom2.jpg" alt="Shree Sai Academy classroom 2" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Classroom View 2</h3><p>Organised student seating</p>
+    </div>
+    <div class="gallery-item">
+      <img src="photos/classroom3.jpg" alt="Shree Sai Academy classroom 3" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Our Learning Space</h3><p>Focused study and preparation</p>
+    </div>
+    <div class="gallery-item">
+      <img src="photos/classroom4.jpg" alt="Shree Sai Academy classroom 4" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Classroom View 4</h3><p>Space for classroom learning</p>
+    </div>
+    <div class="gallery-item">
+      <img src="photos/classroom5.jpg" alt="Shree Sai Academy teaching area" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Teaching Area</h3><p>Learn with confidence</p>
+    </div>
+    <div class="gallery-item">
+      <img src="photos/classroom6.jpg" alt="Shree Sai Academy classroom 6" loading="lazy" onclick="openGalleryPhoto(this)">
+      <h3>Inside Our Academy</h3><p>Shree Sai Academy, Thane</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:30px;"><a href="#contact" class="btn">Visit Our Academy</a></div>
+</section>
+
+<section id="admission-process">
+  <div class="section-title"><h2>Admission Process</h2><p>Start your learning journey in three simple steps.</p></div>
   <ul class="steps">
     <li><strong>Step 1:</strong> Contact us or submit the admission enquiry form.</li>
     <li><strong>Step 2:</strong> Discuss the student's standard, subjects and learning needs.</li>
@@ -731,121 +209,94 @@ document.getElementById("galleryLightbox")
 </section>
 
 <section class="enquiry" id="enquiry">
-  <div class="section-title">
-    <h2>Admission Enquiry</h2>
-    <p>Fill in your details to enquire about classes.</p>
-  </div>
-
+  <div class="section-title"><h2>Admission Enquiry</h2><p>Fill in your details to enquire about classes.</p></div>
   <form class="form-box" id="enquiryForm">
     <label for="student">Student Name *</label>
     <input id="student" name="student" type="text" required placeholder="Enter student name">
-
     <label for="parent">Parent / Guardian Name</label>
     <input id="parent" name="parent" type="text" placeholder="Enter parent name">
-
     <label for="standard">Select Standard *</label>
     <select id="standard" name="standard" required>
-      <option value="">Choose your class</option>
-      <option>Std. 8th</option>
-      <option>Std. 9th</option>
-      <option>Std. 10th</option>
-      <option>Std. 11th</option>
-      <option>Std. 12th</option>
+      <option value="">Choose your class</option><option>Std. 8th</option><option>Std. 9th</option><option>Std. 10th</option><option>Std. 11th</option><option>Std. 12th</option>
     </select>
-
     <label for="board">Board / Curriculum</label>
-    <select id="board" name="board">
-      <option value="">Select board</option>
-      <option>Maharashtra State Board</option>
-      <option>CBSE</option>
-      <option>ICSE</option>
-      <option>Other</option>
-    </select>
-
+    <select id="board" name="board"><option value="">Select board</option><option>Maharashtra State Board</option><option>CBSE</option><option>ICSE</option><option>Other</option></select>
     <label for="phone">Contact Number *</label>
-    <input id="phone" name="phone" type="tel" required
-           pattern="[0-9]{10}" maxlength="10"
-           placeholder="10-digit mobile number">
-
+    <input id="phone" name="phone" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
     <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4"
-              placeholder="Subjects, preferred batch or any questions"></textarea>
-
+    <textarea id="message" name="message" rows="4" placeholder="Subjects, preferred batch or any questions"></textarea>
     <button type="submit" class="btn">Send Enquiry on WhatsApp</button>
-    <p style="font-size:12px;color:#69758a;margin-top:12px">
-      Your WhatsApp application will open with your enquiry ready to send.
-    </p>
+    <p style="font-size:12px;color:#69758a;margin-top:12px">Your WhatsApp application will open with your enquiry ready to send.</p>
   </form>
 </section>
 
 <section id="contact">
-  <div class="section-title">
-    <h2>Contact Shree Sai Academy</h2>
-    <p>Take the first step towards better learning.</p>
-  </div>
+  <div class="section-title"><h2>Contact Shree Sai Academy</h2><p>Take the first step towards better learning.</p></div>
   <div class="contact-info">
     <p>🎓 <strong>Academy:</strong> Shree Sai Academy</p>
     <p>📚 <strong>Standards:</strong> 8th to 12th</p>
-    <p>📍 <strong>Address:</strong> Shop No. 1, Sai Vandan Apt., Near Lokmanya Bus Depot, Lokmanya Nagar, Thane (West) - 400606 </p>
-    <p>📞 <strong>Phone:</strong> 79774 25912 </p>
+    <p>📍 <strong>Address:</strong> Shop No. 1, Sai Vandan Apt., Near Lokmanya Bus Depot, Lokmanya Nagar, Thane (West) - 400606</p>
+    <p>📞 <strong>Phone:</strong> 79774 25912</p>
     <p>🕒 <strong>Timings:</strong> Contact us for batch timings</p>
   </div>
   <a href="#enquiry" class="btn">Enquire Now</a>
 </section>
 </main>
 
+<!-- IMAGE VIEWER -->
+<div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Enlarged classroom photograph" onclick="closeGalleryPhoto()">
+  <button class="gallery-close" type="button" aria-label="Close enlarged image" onclick="closeGalleryPhoto()">&times;</button>
+  <img id="galleryLargeImage" src="" alt="Enlarged classroom photograph">
+</div>
+
 <footer>
   <p><strong>SHREE SAI ACADEMY™</strong></p>
   <p>Building Knowledge. Inspiring Success.</p>
   <p>Classes for Std. 8th to 12th</p>
-  <p style="margin-top:12px">
-    © <span id="year"></span> Shree Sai Academy™. All rights reserved.
-  </p>
+  <p style="margin-top:12px">© <span id="year"></span> Shree Sai Academy™. All rights reserved.</p>
 </footer>
 
 <script>
-  // IMPORTANT: Replace this with your academy's WhatsApp number.
-  // Use country code + number, without +, spaces or dashes.
-  const WHATSAPP_NUMBER = "9179774 25912";
+  const WHATSAPP_NUMBER = "917977425912";
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+  function openGalleryPhoto(image) {
+    const lightbox = document.getElementById("galleryLightbox");
+    const largeImage = document.getElementById("galleryLargeImage");
+    largeImage.src = image.src;
+    largeImage.alt = image.alt;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+  function closeGalleryPhoto() {
+    document.getElementById("galleryLightbox").classList.remove("active");
+    document.getElementById("galleryLargeImage").src = "";
+    document.body.style.overflow = "";
+  }
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") { closeGalleryPhoto(); }
+  });
+  document.getElementById("galleryLightbox").addEventListener("click", function(event) {
+    if (event.target.id === "galleryLargeImage") { event.stopPropagation(); }
+  });
 
-  document.getElementById("enquiryForm").addEventListener("submit",
-    function(event) {
-      event.preventDefault();
-
-      if (!this.reportValidity()) return;
-
-      if (!/^91\d{10}$/.test(WHATSAPP_NUMBER)) {
-        alert("Please configure the academy WhatsApp number in the website code.");
-        return;
-      }
-
-      const student = document.getElementById("student").value.trim();
-      const parent = document.getElementById("parent").value.trim();
-      const standard = document.getElementById("standard").value;
-      const board = document.getElementById("board").value;
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      const text =
-        "Admission Enquiry - Shree Sai Academy™\n\n" +
-        "Student Name: " + student + "\n" +
-        "Parent Name: " + (parent || "Not provided") + "\n" +
-        "Standard: " + standard + "\n" +
-        "Board: " + (board || "Not specified") + "\n" +
-        "Contact Number: " + phone + "\n" +
-        "Message: " + (message || "No additional message");
-
-      const url = "https://wa.me/" + WHATSAPP_NUMBER +
-                  "?text=" + encodeURIComponent(text);
-
-      window.open(url, "_blank", "noopener,noreferrer");
+  document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    if (!this.reportValidity()) return;
+    if (!/^91\d{10}$/.test(WHATSAPP_NUMBER)) {
+      alert("Please configure the academy WhatsApp number in the website code.");
+      return;
     }
-  );
-
+    const student = document.getElementById("student").value.trim();
+    const parent = document.getElementById("parent").value.trim();
+    const standard = document.getElementById("standard").value;
+    const board = document.getElementById("board").value;
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const text = "Admission Enquiry - Shree Sai Academy™\n\n" + "Student Name: " + student + "\n" + "Parent Name: " + (parent || "Not provided") + "\n" + "Standard: " + standard + "\n" + "Board: " + (board || "Not specified") + "\n" + "Contact Number: " + phone + "\n" + "Message: " + (message || "No additional message");
+    const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
 </script>
-
 </body>
 </html>
